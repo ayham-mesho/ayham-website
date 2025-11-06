@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+@font-face {
+  font-family: "MadeEvolveSans";
+  font-weight: 100;
+  src: url("../../public/fonts/MadeEvolveSans/MADEEvolveSans-Thin.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "MadeEvolveSans";
+  font-weight: 300;
+  src: url("../../public/fonts/MadeEvolveSans/MADEEvolveSans-Light.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MadeEvolveSans";
+  font-weight: 500;
+  src: url("../../public/fonts/MadeEvolveSans/MADEEvolveSans-Medium.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "MadeEvolveSans";
+  font-weight: 700;
+  src: url("../../public/fonts/MadeEvolveSans/MADEEvolveSans-Bold.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "MadeEvolveSansEVO";
+  font-weight: 100;
+  src: url("../../public/fonts/MadeEvolveSansEVO/MADEEvolveSansEVO-Thin.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "MadeEvolveSansEVO";
+  font-weight: 300;
+  src: url("../../public/fonts/MadeEvolveSansEVO/MADEEvolveSansEVO-Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "MadeEvolveSansEVO";
+  font-weight: 400;
+  src: url("../../public/fonts/MadeEvolveSansEVO/MADEEvolveSansEVO.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "MadeEvolveSansEVO";
+  font-weight: 500;
+  src: url("../../public/fonts/MadeEvolveSansEVO/MADEEvolveSansEVO-Medium.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "MadeEvolveSansEVO";
+  font-weight: 700;
+  src: url("../../public/fonts/MadeEvolveSansEVO/MADEEvolveSansEVO-Bold.otf")
+    format("opentype");
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.4vw;
+  height: 0.8vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0057a7;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+
+.main-button {
+  position: relative;
+
+  border-radius: 7px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: rgb(0, 87, 167);
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.main-button:hover {
+  background: rgb(0, 87, 167);
+  box-shadow: 0 0 20px 1px rgba(0, 87, 167, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #fff;
+}
+
+.main-button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.main-button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 40px 20px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.main-button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.button {
+  position: relative;
+  border: none;
+  background: #4c4c4c;
+
+  --ani-color: rgba(255, 255, 255, 0);
+  --color-gar: linear-gradient(90deg, #0057a7, #0057a7);
+  letter-spacing: 3px;
+  font-size: 16px;
+  -webkit-background-clip: text;
+
+  text-transform: camelcase;
+  color: transparent;
+
+  cursor: pointer;
+}
+
+.front-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background: var(--color-gar);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200%;
+  overflow: hidden;
+  transition: all 0.3s;
+  animation: 0.6s ani infinite;
+  border-bottom: 2px solid transparent;
+}
+
+.button:hover .front-text {
+  width: 100%;
+  border-bottom: 2px solid #0057a7;
+  -webkit-text-stroke: 1px var(--ani-color);
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 400%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
