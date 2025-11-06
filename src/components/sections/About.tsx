@@ -38,7 +38,8 @@ const About = () => {
       >
         <Image
           src={ProfilePic}
-          className="  xl:mt-6 md:mt-5 object-cover h-full"
+          quality={100}	
+          className="  xl:mt-0 md:mt-5 object-cover h-full w-full"
           alt="Ayham Mesho - Front-End Developer"
         />
       </motion.div>
